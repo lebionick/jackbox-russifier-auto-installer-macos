@@ -20,12 +20,12 @@ build-backend = "uv_build"
 line-length = 120
 
 # Linting rules
-select = ["E", "F", "B", "I", "C4", "UP"]
+lint.select = ["E", "F", "B", "I", "C4", "UP"]
 
 # Formatting rules (makes ruff act like black + isort)
-extend-select = ["Q", "W191", "W291", "W292", "W293", "W605"]
+lint.extend-select = ["Q", "W191", "W291", "W292", "W293", "W605"]
 
 # Per-file ignores
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["F401"]  # Unused imports allowed in __init__.py
 "tests/*" = ["S101"]      # Allow asserts in tests
